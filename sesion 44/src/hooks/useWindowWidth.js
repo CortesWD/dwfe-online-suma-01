@@ -3,6 +3,10 @@
  */
 import { useState, useEffect } from 'react';
 
+/**
+ * @description hook to return the window width from event listener 
+ * @returns {Number} - window updated width
+ */
 export default function useWindowWidth() {
   const [width, setWidth] = useState(null);
 

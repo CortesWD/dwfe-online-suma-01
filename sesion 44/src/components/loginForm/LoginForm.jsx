@@ -21,13 +21,13 @@ import useControl from '../../hooks/useControl';
  */
 import "./LoginForm.css";
 
-function LoginForm() {
-  const valLength = (val) => val.length < 6;
-  const validations = {
-    length: valLength,
-    name: (val) => val.toLowerCase() === 'nombre',
-  };
+const valLength = (val) => val.length < 6;
+const validations = {
+  length: valLength,
+  name: (val) => val.toLowerCase() === 'nombre',
+};
 
+function LoginForm() {
   const name = useControl('', validations);
   
   const width = useWindowWidth();
@@ -37,7 +37,7 @@ function LoginForm() {
       <Card className={width < 400 ? 'bg-green' : ''}>
         <form className="form">
           <Input
-            onChange={name.manejarCambio}
+            onChange={name.handleChange}
             placeholder="UserName"
             autoComplete="off"
             name="name"
