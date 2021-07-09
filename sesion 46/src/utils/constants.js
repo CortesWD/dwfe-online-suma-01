@@ -4,7 +4,7 @@ export const URLS = {
   events: '/eventos',
 };
 
-export const cursos = [
+export const CURSOS = [
   {
     id: "1",
     name: "UX/UI",

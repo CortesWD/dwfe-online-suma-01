@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom';
 /**
  * others
  */
-import { URLS, cursos } from '../../../../utils/constants';
+import { URLS, CURSOS } from '../../../../utils/constants';
 
 function CoursesList() {
   return (
     <div className="curso">
       <h2>Cursos</h2>
       <ul>
-        {cursos.map(({ id, name, pathName }) => {
+        {CURSOS.map(({ id, name, pathName }) => {
           return (
             <li key={id} >
               <Link to={`${URLS.courses}/${pathName}`}>{name}</Link>

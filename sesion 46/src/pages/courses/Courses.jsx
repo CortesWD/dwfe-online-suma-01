@@ -18,7 +18,7 @@ import './Courses.css';
 /**
  * Others
  */
-import { URLS, cursos } from '../../utils/constants';
+import { URLS, CURSOS } from '../../utils/constants';
 import ux from '../../assets/ux.svg';
 import frontend from "../../assets/frontend.svg";
 import backend from "../../assets/backend.svg";
@@ -26,40 +26,44 @@ import ds from "../../assets/datascience.svg";
 
 const { courses } = URLS;
 
-function Courses() {
-  
-  const img = (name) => {
-    let svg = '';
-    switch (name) {
-      case 'ux':
-        svg = ux;
-        break;
-      case 'ds':
-        svg = ds;
-        break;
-      case 'fsv': 
-        svg = backend
-        break;
-      case 'fa':
-        svg = frontend;
-        break;
-      default:
-        svg = '';
-        break;
-    }
-    return svg;
+/**
+ * @description Function to evaluate which image component should render
+ * @param {String} name
+ * @returns image component
+ */
+const img = (name) => {
+  let svg = '';
+  switch (name) {
+    case 'ux':
+      svg = ux;
+      break;
+    case 'ds':
+      svg = ds;
+      break;
+    case 'fsv':
+      svg = backend
+      break;
+    case 'fa':
+      svg = frontend;
+      break;
+    default:
+      svg = '';
+      break;
   }
+  return svg;
+}
 
+function Courses() {
   return (
     <div>
       <Route exact path={courses} component={CoursesList} />
-      {cursos.map((curso) => {
+      {CURSOS.map(({ pathName, name }) => {
         return (
           <Route
             exact
-            path={`${courses}/${curso.pathName}`}
+            path={`${courses}/${pathName}`}
             render={() => {
-              return <Course name={curso.name} image={img(curso.pathName)} />
+              return <Course name={name} image={img(pathName)} />
             }}
           />
         )
