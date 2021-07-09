@@ -1,7 +1,7 @@
-import ux from '../../assets/ux.svg';
-import frontend from "../../assets/frontend.svg";
-import backend from "../../assets/backend.svg";
-import ds from "../../assets/datascience.svg";
+import ux from '../assets/ux.svg';
+import frontend from "../assets/frontend.svg";
+import backend from "../assets/backend.svg";
+import ds from "../assets/datascience.svg";
 
 export const URLS = {
   base: '/',
