@@ -15,6 +15,10 @@ import { URLS } from '../../utils/constants';
 import { AppContext } from '../../context/AppContext';
 
 function Header() {
+  /**
+   * se usa el contexto definido
+   * para extraer ya sea el valor o el setValue
+   */
   const {store} = useContext(AppContext);
   return (
     <header>
