@@ -25,10 +25,8 @@ const Img = ({ src }) => {
  * @param {String} param - query term
  */
 async function getGifs(param) {
-  const getCat = await request(param);
-  if(!getCat.ok) throw new Error('cannot fulfilled');
-  
   try {
+    const getCat = await request(param);
     const { data } = await getCat.json();
 
     /**
@@ -48,6 +46,12 @@ async function getGifs(param) {
   } catch (error) {
     console.error(error);
     app.innerHTML = "Ocurrio un error";
+  } finally {
+    /**
+     * finally es una operación final opcional
+     * que se ejecuta sea ok o error nuestra promesa.
+     */
+    console.log('termine la operacion')
   }
 }
 
