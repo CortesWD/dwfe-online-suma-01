@@ -47,7 +47,7 @@ async function getGifs(param) {
     console.error(error);
     app.innerHTML = "Ocurrio un error";
   } finally {
-    /**
+    /** 
      * finally es una operación final opcional
      * que se ejecuta sea ok o error nuestra promesa.
      */
