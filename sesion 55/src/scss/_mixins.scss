@@ -1,0 +1,26 @@
+@import './variables';
+
+@mixin cuadrado($val) {
+  height: $val;
+  width: $val;
+}
+
+@mixin sprite($name, $secs, $steps, $h, $w, $image) {
+  animation: $name $secs steps($steps) infinite;
+  background-color: transparent;
+  background-image: url($image);
+  height: $h;
+  width: $w;
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}

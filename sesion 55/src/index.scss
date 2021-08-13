@@ -1,0 +1,47 @@
+@import './scss/variables';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $fontRubik;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  height: 100vh;
+}
+
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+}
+
+.centered {
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  > li {
+    /* border: 1px solid black; */
+    padding: 10px;
+    list-style-type: none;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+.main {
+  padding: 15px;
+}

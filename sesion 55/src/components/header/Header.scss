@@ -1,0 +1,31 @@
+@import './../../scss/variables';
+@import './../../scss/mixins';
+
+.nav-bar {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  background-color: $azul;
+  height: 65px;
+  padding: 10px;
+
+  @include tablet {
+    height: 300px;
+  }
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.2s all;
+
+  &:hover {
+    text-decoration: underline;
+    /* font-size: 19px; */
+  }
+}
